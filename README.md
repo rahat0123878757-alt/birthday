@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Happy Birthday Zara Maam ❤️</title>
+
+  <!-- Pink Heart SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='40%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23ff7eb9'/%3E%3Cstop offset='60%25' stop-color='%23ff1e8a'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M50 88.9C47.8 87.1 10 57.6 10 32.5 10 19.5 20.3 9 33 9c7.4 0 14.3 3.6 17 9.4C52.7 12.6 59.6 9 67 9c12.7 0 23 10.5 23 23.5 0 25.1-37.8 54.6-40 56.4z'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Romantic Script, Elegant Serif, Clean Sans, and Bengali Support -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP for Cinematic Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#06030a',
+            velvet: '#11071c',
+            neonPink: '#ff1e8a',
+            softPink: '#ff7eb9',
+            softPurple: '#c084fc',
+            deepPurple: '#581c87',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            handwriting: ['"Caveat"', '"Hind Siliguri"', 'cursive'],
+            bengali: ['"Hind Siliguri"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Fullscreen Lightbox Modal Styles -->
+  <style>
+    /* ==========================================================================
+       CORE THEME, COSMIC BACKGROUND & SCENE 1/2 STYLES
+       ========================================================================== */
+    body {
+      background-color: #06030a;
+      color: #fdf2f8;
+      overflow-x: hidden;
+    }
+
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 30, 138, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(192, 132, 252, 0.14) 0%, transparent 50%),
+        radial-gradient(circle at 50% 85%, rgba(255, 30, 138, 0.12) 0%, transparent 50%),
+        linear-gradient(180deg, #06030a 0%, #0e0518 50%, #06030a 100%);
+    }
+
+    #magic-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .heart-portal-wrapper {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .heart-portal-wrapper:hover {
+      transform: scale(1.08);
+    }
+
+    .heart-portal-wrapper:active {
+      transform: scale(0.95);
+    }
+
+    .pulse-ring {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 30, 138, 0.55);
+      box-shadow: 0 0 25px rgba(255, 30, 138, 0.45);
+      animation: pulseWave 2.6s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+      pointer-events: none;
+    }
+
+    .pulse-ring:nth-child(2) {
+      animation-delay: 1.3s;
+      border-color: rgba(192, 132, 252, 0.5);
+    }
+
+    @keyframes pulseWave {
+      0% { transform: scale(0.75); opacity: 0.9; }
+      100% { transform: scale(1.75); opacity: 0; }
+    }
+
+    .hero-heart-svg {
+      width: 108px;
+      height: 108px;
+      filter: drop-shadow(0 0 22px rgba(255, 30, 138, 0.85)) drop-shadow(0 0 45px rgba(192, 132, 252, 0.5));
+      animation: heartBeatGlow 1.9s ease-in-out infinite;
+    }
+
+    @keyframes heartBeatGlow {
+      0%, 100% { transform: scale(1); }
+      20% { transform: scale(1.1); }
+      40% { transform: scale(0.98); }
+      60% { transform: scale(1.07); }
+    }
+
+    .word-group {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .letter-span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px) scale(0.8);
+      filter: blur(6px);
+      text-shadow:
+        0 0 12px rgba(255, 30, 138, 0.9),
+        0 0 28px rgba(255, 30, 138, 0.65),
+        0 0 45px rgba(192, 132, 252, 0.5);
+    }
+
+    /* ==========================================================================
+       SCENE 3: SCROLLABLE & ZOOMABLE PHOTO GALLERY + HIDDEN SURPRISE CARD
+       ========================================================================== */
+    .photo-frame-glow {
+      position: relative;
+      border-radius: 26px;
+      padding: 3px;
+      background: linear-gradient(135deg, #ff1e8a, #c084fc, #ff7eb9, #9333ea);
+      background-size: 300% 300%;
+      animation: borderGradientFlow 6s ease infinite;
+      box-shadow:
+        0 0 25px rgba(255, 30, 138, 0.4),
+        0 0 55px rgba(192, 132, 252, 0.22);
+    }
+
+    @keyframes borderGradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .photo-inner-card {
+      border-radius: 23px;
+      overflow: hidden;
+      background: #0d0614;
+      position: relative;
+    }
+
+    /* Horizontal Smooth Snap Scroll Gallery */
+    .gallery-scroller {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.75rem 0.5rem 1.25rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-scroller::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .gallery-scroller::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 999px;
+    }
+
+    .gallery-scroller::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #ff1e8a, #c084fc);
+      border-radius: 999px;
+    }
+
+    .gallery-slide {
+      flex: 0 0 82%;
+      sm:flex: 0 0 74%;
+      scroll-snap-align: center;
+      transition: transform 0.35s ease;
+    }
+
+    @media (min-width: 640px) {
+      .gallery-slide {
+        flex: 0 0 72%;
+      }
+    }
+
+    /* Secret Covered Card ("Only For You") */
+    .secret-cover-overlay {
+      background: radial-gradient(circle at 50% 40%, rgba(46, 12, 68, 0.96) 0%, rgba(10, 4, 18, 0.99) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), filter 0.85s ease;
+    }
+
+    .secret-cover-overlay.unlocked {
+      opacity: 0;
+      transform: scale(1.18);
+      filter: blur(14px);
+      pointer-events: none;
+    }
+
+    /* Lightbox Zoom Modal */
+    .zoom-modal-backdrop {
+      background: rgba(5, 2, 10, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      touch-action: none; /* Enables custom 2-finger pinch-to-zoom & swipe */
+    }
+
+    #zoom-modal-img {
+      transform-origin: center center;
+      will-change: transform;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* ==========================================================================
+       SCENE 4: INTERACTIVE UNFOLDING ENVELOPE & ROMANTIC PAPER LETTER
+       ========================================================================== */
+    .envelope-container {
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .envelope-box {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      height: 225px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, #240b36 0%, #140620 100%);
+      border: 1.5px solid rgba(255, 126, 185, 0.45);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 30, 138, 0.35);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .envelope-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 48px rgba(255, 30, 138, 0.55);
+    }
+
+    /* Envelope Flap */
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 125px;
+      background: linear-gradient(180deg, #ff1e8a 0%, #9333ea 100%);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top center;
+      transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 4;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .envelope-container.opened .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    /* Envelope Pocket Overlay */
+    .envelope-pocket {
+      position: absolute;
+      inset: 0;
+      border-radius: 17px;
+      background: linear-gradient(135deg, rgba(45, 14, 68, 0.95) 0%, rgba(20, 6, 33, 0.98) 100%);
+      clip-path: polygon(0 18%, 50% 62%, 100% 18%, 100% 100%, 0 100%);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* Wax Seal Heart */
+    .wax-seal {
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ff7eb9, #ff1e8a 65%, #9d174d);
+      box-shadow: 0 0 22px rgba(255, 30, 138, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .envelope-container.opened .wax-seal {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+      pointer-events: none;
+    }
+
+    /* Soft Pink Romantic Letter Paper */
+    .letter-paper {
+      background: linear-gradient(180deg, #fff0f7 0%, #ffe0ef 55%, #ffd1e8 100%);
+      color: #2b091c;
+      border-radius: 22px;
+      border: 2px solid rgba(255, 126, 185, 0.85);
+      box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.85),
+        0 0 40px rgba(255, 30, 138, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle ruled paper lines */
+    .letter-paper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 31px,
+        rgba(255, 30, 138, 0.08) 32px
+      );
+      pointer-events: none;
+    }
+
+    .letter-text {
+      font-family: 'Caveat', 'Hind Siliguri', cursive;
+      font-size: 1.42rem;
+      line-height: 1.75;
+      color: #2e081d;
+      white-space: pre-line;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 640px) {
+      .letter-text {
+        font-size: 1.62rem;
+      }
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background-color: #ff1e8a;
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blinkCursor 0.8s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    /* ==========================================================================
+       SCENE 5: SECRET REVEAL & REPLAY BUTTON
+       ========================================================================== */
+    .secret-card-shell {
+      background: linear-gradient(145deg, rgba(28, 10, 44, 0.88) 0%, rgba(12, 5, 20, 0.94) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 126, 185, 0.38);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(192, 132, 252, 0.25);
+    }
+
+    /* Utility helper for hidden scenes */
+    .scene-hidden {
+      display: none;
+      opacity: 0;
+    }
+
+    /* Floating decorative elements around photo */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(6deg); }
+    }
+
+    .float-badge {
+      animation: floatSlow 3.8s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- ========================================================================
+       EASY CUSTOMIZATION CONFIG (Edit Zara's Photos or Letter Here!)
+       ======================================================================== -->
+  <script>
+    const SURPRISE_CONFIG = {
+      // 1. Scrollable & Pinch-Zoomable Gallery Photos (Exact Serial 1 to 8)
+      galleryPhotos: [
+        "https://i.postimg.cc/CKctnhXm/photo-2026-11-25-08-56-31.jpg",
+        "https://i.postimg.cc/W4xGHxkz/photo-2026-11-25-08-56-33.jpg",
+        "https://i.postimg.cc/Xq4CMWNz/photo-2026-11-25-08-56-35.jpg",
+        "https://i.postimg.cc/gkGvQVng/photo-2026-11-25-08-56-36.jpg",
+        "https://i.postimg.cc/sDnZLbkb/photo-2026-11-25-08-56-37.jpg",
+        "https://i.postimg.cc/nLmjCrXV/photo-2026-11-25-08-56-39.jpg",
+        "https://i.postimg.cc/FHM15vDD/photo-2026-11-25-08-56-41.jpg",
+        "https://i.postimg.cc/0jyydyy6/photo-2026-11-25-08-56-43.jpg"
+      ],
+
+      // 2. Final Hidden Photo #9 ("Only For You") Revealed on Heart Click
+      secretPhotoUrl: "https://i.postimg.cc/BQynHs90/photo-2026-11-25-08-56-50.jpg",
+
+      // 3. Main Birthday Heading
+      birthdayHeading: "Happy Birthday Zara Maam ❤️",
+
+      // 4. Personal Letter Message
+      letterMessage: `প্রিয় আমার Zara Maam, ❤️
+জানো, জীবনে কিছু মানুষ হঠাৎ করেই আসে, কিন্তু ধীরে ধীরে জীবনের সবচেয়ে সুন্দর একটা অংশ হয়ে যায়। তুমি আমার কাছে ঠিক তেমনই একজন। তোমার সঙ্গে কথা বলা, তোমার অভিমান—সবকিছুই আমার কাছে অনেক স্পেশাল।
+হয়তো সবসময় তোমাকে মনের কথাগুলো সুন্দর করে বলতে পারি না, হয়তো কখনো রাগ করি, কখনো অভিমান করি। কিন্তু একটা কথা মনে রেখো, তোমাকে হারানোর ভয়টা আমার কাছে অনেক বেশি। আমি চাই, তোমার জীবনের প্রতিটি আনন্দের মুহূর্তে তোমার পাশে থাকতে, তোমার মন খারাপের দিনে তোমার হাসির কারণ হতে।
+আজ তোমার জন্মদিন। আমার চাওয়া, তোমার জীবনের প্রতিটি দিন যেন হাসি, আনন্দ আর সুন্দর মুহূর্তে ভরে থাকে। তোমার সব স্বপ্ন পূরণ হোক, আর তোমার মুখের হাসিটা যেন কখনো হারিয়ে না যায়।
+আমি জানি না ভবিষ্যৎ আমাদের জন্য কী লিখে রেখেছে, তবে আমি চাই প্রতিটি আগামী দিনে তোমার হাতটা ধরে এগিয়ে যেতে।
+Happy Birthday, My Zara Maam.....! 🎂❤️
+অনেক অনেক ভালোবাসি তোমাকে।
+
+তোমার পাগল জামাই,
+
+Rahat ❤️`
+    };
+  </script>
+
+  <!-- Ambient Gradient & Particle Canvas -->
+  <div class="ambient-bg"></div>
+  <canvas id="magic-canvas"></canvas>
+
+  <!-- ========================================================================
+       MAIN EXPERIENCE CONTAINER
+       ======================================================================== -->
+  <main class="relative z-10 min-h-screen w-full flex flex-col items-center justify-center px-4 py-10">
+
+    <!-- ======================================================================
+         SCENE 1: FIRST SCREEN ("Click To Open Love ❤️")
+         ====================================================================== -->
+    <section id="scene-1" class="min-h-[82vh] w-full max-w-md mx-auto flex flex-col items-center justify-center text-center">
+      <div
+        id="open-love-btn"
+        class="heart-portal-wrapper mb-7"
+        role="button"
+        tabindex="0"
+        aria-label="Click To Open Love"
+      >
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <svg class="hero-heart-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="portalHeartGrad" x1="15" y1="15" x2="105" y2="105" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ff85c0" />
+              <stop offset="50%" stop-color="#ff1e8a" />
+              <stop offset="100%" stop-color="#9333ea" />
+            </linearGradient>
+          </defs>
+          <path d="M60 105C57.3 102.8 12 68.2 12 38.5C12 23.2 24.1 11 39 11C47.7 11 55.8 15.2 60 22C64.2 15.2 72.3 11 81 11C95.9 11 108 23.2 108 38.5C108 68.2 62.7 102.8 60 105Z" fill="url(#portalHeartGrad)" />
+        </svg>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-wide text-pink-100 drop-shadow-[0_0_16px_rgba(255,30,138,0.85)]">
+        Click To Open Love ❤️
+      </h1>
+      <p class="mt-2.5 text-sm sm:text-base text-purple-200/80 font-light tracking-wide">
+        A little surprise is waiting for you...
+      </p>
+    </section>
+
+    <!-- ======================================================================
+         SURPRISE JOURNEY (SCENES 2, 3, 4 & 5)
+         ====================================================================== -->
+    <div id="surprise-journey" class="scene-hidden w-full max-w-xl mx-auto flex flex-col items-center gap-12 sm:gap-16 pb-16">
+
+      <!-- ====================================================================
+           SCENE 2: MAGICAL OPENING HEADING ("Happy Birthday Zara Maam ❤️")
+           ==================================================================== -->
+      <section id="scene-2" class="text-center pt-4 px-2">
+        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-pink-500/15 border border-pink-400/35 text-pink-200 text-xs tracking-widest uppercase mb-4 shadow-[0_0_20px_rgba(255,30,138,0.3)]">
+          <span>✨ Today Is All About You ✨</span>
+        </div>
+
+        <h2
+          id="birthday-title"
+          class="font-script text-4xl sm:text-6xl md:text-7xl text-pink-100 leading-tight py-2"
+        ></h2>
+
+        <p
+          id="birthday-subtitle"
+          class="mt-3 text-sm sm:text-base text-purple-200/85 max-w-md mx-auto opacity-0"
+        >
+          May your world always shine with magic, warmth, and endless smiles.
+        </p>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 3: SCROLLABLE & PINCH-ZOOMABLE PHOTO GALLERY
+           ==================================================================== -->
+      <section id="scene-3" class="scene-hidden w-full max-w-lg mx-auto relative">
+        <div class="text-center mb-3">
+          <p class="text-xs sm:text-sm text-pink-200/85 tracking-wide">
+            Swipe through our memories • Tap any photo to pinch-zoom ✨
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Horizontal Scrollable Photo Cards -->
+          <div id="photo-gallery-scroller" class="gallery-scroller">
+            <!-- Populated dynamically via JS -->
+          </div>
+
+          <!-- Interactive Dot Indicators & Prev/Next Controls -->
+          <div class="mt-2 flex items-center justify-center gap-3">
+            <button id="gallery-prev-btn" type="button" class="w-8 h-8 rounded-full bg-white/10 hover:bg-pink-500/30 border border-pink-400/35 text-pink-200 flex items-center justify-center text-sm transition active:scale-90" aria-label="Previous Photo">
+              ‹
+            </button>
+            <div id="gallery-dots" class="flex items-center gap-1.5"></div>
+            <button id="gallery-next-btn" type="button" class="w-8 h-8 rounded-full bg-white/10 hover:bg-pink-500/30 border border-pink-400/35 text-pink-200 flex items-center justify-center text-sm transition active:scale-90" aria-label="Next Photo">
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 4: ANIMATED ENVELOPE & HANDWRITTEN LOVE LETTER
+           ==================================================================== -->
+      <section id="scene-4" class="scene-hidden w-full max-w-md mx-auto">
+        <!-- Closed / Opening Envelope View -->
+        <div id="envelope-wrapper" class="envelope-container text-center" role="button" tabindex="0" aria-label="Open Personal Message">
+          <div class="envelope-box">
+            <!-- Top Triangular Flap -->
+            <div class="envelope-flap"></div>
+
+            <!-- Inner Peek Card -->
+            <div class="absolute inset-x-5 top-5 bottom-4 rounded-xl bg-pink-100/95 flex items-start justify-center pt-4 shadow-inner z-2">
+              <span class="font-handwriting text-pink-900 text-lg font-semibold">For Zara Maam...</span>
+            </div>
+
+            <!-- Front Envelope Pocket -->
+            <div class="envelope-pocket"></div>
+
+            <!-- Glowing Wax Heart Seal -->
+            <div class="wax-seal">
+              <svg class="w-7 h-7 text-white drop-shadow" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+
+            <!-- Envelope Front Label -->
+            <div class="absolute bottom-4 inset-x-0 z-10 text-center px-4">
+              <p class="text-base sm:text-lg font-semibold text-pink-200 tracking-wide drop-shadow-[0_0_10px_rgba(255,30,138,0.8)]">
+                A Little Message For You 💌
+              </p>
+              <p class="text-xs text-purple-300/80 mt-0.5">Tap the envelope to unfold</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unfolded Romantic Paper Letter (Revealed when envelope is clicked) -->
+        <div id="letter-card" class="scene-hidden letter-paper p-6 sm:p-8 mt-2">
+          <!-- Top Decorative Hearts -->
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-pink-300/60 relative z-10">
+            <div class="flex items-center gap-1.5 text-pink-600">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <span class="text-xs font-sans font-semibold uppercase tracking-widest text-pink-700/80">Personal Note</span>
+            </div>
+            <span class="text-xs font-sans text-pink-600/75">24 • Nov • Special Day</span>
+          </div>
+
+          <!-- Typed Message Container -->
+          <div class="min-h-[240px] relative z-10">
+            <p id="typed-letter-content" class="letter-text"></p>
+          </div>
+
+          <!-- Bottom Heart Sign-Off -->
+          <div id="letter-footer" class="mt-6 pt-3 border-t border-pink-300/50 flex items-center justify-between text-pink-700 opacity-0 transition-opacity duration-700 relative z-10">
+            <span class="font-script text-2xl text-pink-600">Forever Yours ❤️</span>
+            <div class="flex gap-1 text-pink-500">
+              <span>♥</span><span>♥</span><span>♥</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 5: COVERED SURPRISE PHOTO ("Only For You") + REPLAY BUTTON
+           ==================================================================== -->
+      <section id="scene-5" class="scene-hidden w-full max-w-sm sm:max-w-md mx-auto">
+        <div class="text-center mb-4">
+          <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-pink-500/15 border border-pink-400/40 text-pink-200 text-xs tracking-widest uppercase shadow-[0_0_20px_rgba(255,30,138,0.3)]">
+            <span>Only For You ❤️</span>
+          </div>
+        </div>
+
+        <!-- Glowing Frame Holding the Covered Secret Photo -->
+        <div class="photo-frame-glow">
+          <div class="photo-inner-card aspect-[4/5] w-full relative">
+            <!-- Hidden Photo #9 (Zoomable once unlocked) -->
+            <img
+              id="secret-photo-img"
+              src="https://i.postimg.cc/BQynHs90/photo-2026-11-25-08-56-50.jpg"
+              alt="Only For You Zara"
+              class="w-full h-full object-cover cursor-zoom-in transition-transform duration-700 hover:scale-105"
+            />
+
+            <!-- Bottom Tap-to-Zoom Hint after Unlock -->
+            <div id="secret-unlocked-badge" class="hidden absolute bottom-3 inset-x-4 z-10 flex items-center justify-between px-3.5 py-2 rounded-full bg-black/65 border border-pink-400/40 backdrop-blur-md text-xs text-pink-200 pointer-events-none">
+              <span>Only For You ❤️</span>
+              <span class="text-[11px] text-purple-300">Tap to zoom</span>
+            </div>
+
+            <!-- Romantic Cover Overlay (Opens with Magical Heart Animation on Click) -->
+            <div
+              id="secret-cover"
+              class="secret-cover-overlay absolute inset-0 z-20 flex flex-col items-center justify-center p-6 text-center cursor-pointer select-none"
+              role="button"
+              tabindex="0"
+              aria-label="Unlock Only For You Surprise Photo"
+            >
+              <span class="px-3.5 py-1 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-200 text-xs tracking-widest uppercase mb-5">
+                Only For You
+              </span>
+
+              <!-- Glowing Unlock Heart -->
+              <div class="relative flex items-center justify-center my-2">
+                <div class="pulse-ring" style="width: 115px; height: 115px;"></div>
+                <svg class="w-24 h-24 hero-heart-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="secretHeartGrad" x1="15" y1="15" x2="105" y2="105" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#ff85c0" />
+                      <stop offset="50%" stop-color="#ff1e8a" />
+                      <stop offset="100%" stop-color="#9333ea" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M60 105C57.3 102.8 12 68.2 12 38.5C12 23.2 24.1 11 39 11C47.7 11 55.8 15.2 60 22C64.2 15.2 72.3 11 81 11C95.9 11 108 23.2 108 38.5C108 68.2 62.7 102.8 60 105Z" fill="url(#secretHeartGrad)" />
+                </svg>
+              </div>
+
+              <p class="mt-4 text-lg font-semibold text-pink-100 drop-shadow-[0_0_12px_rgba(255,30,138,0.85)]">
+                Tap Love To Reveal ❤️
+              </p>
+              <p class="mt-1 text-xs text-purple-200/75">
+                A special memory hidden just for you
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             REPLAY SURPRISE BUTTON
+             ================================================================== -->
+        <div class="mt-12 text-center">
+          <button
+            id="replay-btn"
+            type="button"
+            class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/5 hover:bg-pink-500/20 border border-pink-400/40 text-pink-200 text-sm font-medium shadow-[0_0_25px_rgba(255,30,138,0.2)] hover:shadow-[0_0_30px_rgba(255,30,138,0.45)] transition-all duration-300 active:scale-95"
+          >
+            <svg class="w-4 h-4 text-neonPink" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            <span>Replay Magical Surprise ✨</span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       FULLSCREEN PINCH-ZOOM & SWIPE LIGHTBOX MODAL FOR MOBILE
+       ======================================================================== -->
+  <div id="zoom-modal" class="zoom-modal-backdrop fixed inset-0 z-50 hidden flex-col items-center justify-center p-3">
+    <!-- Top Controls -->
+    <div class="absolute top-4 inset-x-4 flex items-center justify-between max-w-2xl mx-auto z-20">
+      <span id="zoom-counter" class="px-3.5 py-1 rounded-full bg-white/10 border border-pink-400/30 text-xs text-pink-200">
+        1 / 8
+      </span>
+
+      <div class="flex items-center gap-2">
+        <button id="zoom-reset-btn" type="button" class="px-3.5 py-1.5 rounded-full bg-pink-500/25 hover:bg-pink-500/40 border border-pink-400/40 text-xs text-pink-100 transition">
+          Reset 1x
+        </button>
+        <button id="zoom-close-btn" type="button" class="w-9 h-9 rounded-full bg-white/10 hover:bg-pink-500/40 border border-white/20 flex items-center justify-center text-white transition" aria-label="Close Zoom View">
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <!-- Left / Right Slide Arrows -->
+    <button id="lightbox-prev-btn" type="button" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/60 border border-pink-400/40 text-pink-100 text-xl flex items-center justify-center active:scale-90">
+      ‹
+    </button>
+    <button id="lightbox-next-btn" type="button" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/60 border border-pink-400/40 text-pink-100 text-xl flex items-center justify-center active:scale-90">
+      ›
+    </button>
+
+    <!-- Touch Pinch-Zoom & Swipe Viewport -->
+    <div id="zoom-viewport" class="w-full h-full flex items-center justify-center overflow-hidden">
+      <img
+        id="zoom-modal-img"
+        src=""
+        alt="Zoomed Memory"
+        class="max-h-[80vh] max-w-[92vw] w-auto object-contain rounded-2xl shadow-[0_0_40px_rgba(255,30,138,0.45)]"
+      />
+    </div>
+
+    <!-- Mobile Gesture Hint -->
+    <div id="zoom-hint" class="absolute bottom-5 inset-x-4 text-center z-20 pointer-events-none">
+      <span class="px-4 py-1.5 rounded-full bg-black/65 border border-pink-400/30 text-[11px] text-pink-200/90 backdrop-blur-md">
+        Pinch with 2 fingers to zoom • Swipe left/right to change
+      </span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       JAVASCRIPT: PARTICLE ENGINE, BUTTERFLIES, GALLERY, ZOOM & GSAP
+       ======================================================================== -->
+  <script>
+    /* ------------------------------------------------------------------------
+       2. SCROLLABLE & 2-FINGER PINCH-ZOOMABLE PHOTO GALLERY + SWIPE LIGHTBOX
+       ------------------------------------------------------------------------ */
+    const galleryScroller = document.getElementById('photo-gallery-scroller');
+    const galleryDots = document.getElementById('gallery-dots');
+    const galleryPrevBtn = document.getElementById('gallery-prev-btn');
+    const galleryNextBtn = document.getElementById('gallery-next-btn');
+
+    const zoomModal = document.getElementById('zoom-modal');
+    const zoomViewport = document.getElementById('zoom-viewport');
+    const zoomModalImg = document.getElementById('zoom-modal-img');
+    const zoomCounter = document.getElementById('zoom-counter');
+    const zoomResetBtn = document.getElementById('zoom-reset-btn');
+    const zoomCloseBtn = document.getElementById('zoom-close-btn');
+    const lightboxPrevBtn = document.getElementById('lightbox-prev-btn');
+    const lightboxNextBtn = document.getElementById('lightbox-next-btn');
+
+    let currentLightboxIndex = 0;
+    let isSecretLightbox = false;
+
+    // Pinch-to-Zoom & Pan Transform State
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    let initialPinchDistance = 0;
+    let initialScale = 1;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let swipeStartX = 0;
+    let swipeStartY = 0;
+    let lastTapTime = 0;
+
+    function updateImageTransform(animate = false) {
+      zoomModalImg.style.transition = animate ? 'transform 0.25s ease-out' : 'none';
+      zoomModalImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+      zoomResetBtn.textContent = scale > 1.05 ? `Reset (${scale.toFixed(1)}x)` : 'Pinch / 2x';
+    }
+
+    function resetZoomTransform(animate = true) {
+      scale = 1;
+      translateX = 0;
+      translateY = 0;
+      updateImageTransform(animate);
+    }
+
+    function buildPhotoGallery() {
+      galleryScroller.innerHTML = '';
+      galleryDots.innerHTML = '';
+
+      SURPRISE_CONFIG.galleryPhotos.forEach((url, idx) => {
+        const slide = document.createElement('div');
+        slide.className = 'gallery-slide';
+        slide.innerHTML = `
+          <div class="photo-frame-glow">
+            <div class="photo-inner-card aspect-[4/5] w-full cursor-zoom-in group" data-index="${idx}">
+              <img
+                src="${url}"
+                alt="Zara Memory ${idx + 1}"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-3 inset-x-3.5 flex items-center justify-between text-xs text-pink-200">
+                <span class="font-medium drop-shadow">Memory #${idx + 1} ❤️</span>
+                <span class="px-2.5 py-1 rounded-full bg-black/60 border border-pink-400/35 text-[11px] backdrop-blur-sm">
+                  Tap & Pinch Zoom 🔍
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
+        slide.querySelector('.photo-inner-card').addEventListener('click', () => {
+          openGalleryLightbox(idx);
+        });
+        galleryScroller.appendChild(slide);
+
+        // Dot indicator
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = `h-2 rounded-full transition-all duration-300 ${idx === 0 ? 'w-5 bg-neonPink' : 'w-2 bg-white/30'}`;
+        dot.setAttribute('aria-label', `Go to photo ${idx + 1}`);
+        dot.addEventListener('click', () => scrollToSlide(idx));
+        galleryDots.appendChild(dot);
+      });
+    }
+    buildPhotoGallery();
+
+    function scrollToSlide(index) {
+      const slides = galleryScroller.querySelectorAll('.gallery-slide');
+      if (!slides[index]) return;
+      const targetLeft = slides[index].offsetLeft - (galleryScroller.clientWidth - slides[index].clientWidth) / 2;
+      galleryScroller.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    }
+
+    // Update active dot on horizontal swipe/scroll
+    galleryScroller.addEventListener('scroll', () => {
+      const slides = galleryScroller.querySelectorAll('.gallery-slide');
+      if (!slides.length) return;
+      const center = galleryScroller.scrollLeft + galleryScroller.clientWidth / 2;
+      let closestIdx = 0;
+      let minDist = Infinity;
+      slides.forEach((s, i) => {
+        const slideCenter = s.offsetLeft + s.clientWidth / 2;
+        const dist = Math.abs(center - slideCenter);
+        if (dist < minDist) {
+          minDist = dist;
+          closestIdx = i;
+        }
+      });
+      const dots = galleryDots.querySelectorAll('button');
+      dots.forEach((d, i) => {
+        d.className = `h-2 rounded-full transition-all duration-300 ${i === closestIdx ? 'w-5 bg-neonPink' : 'w-2 bg-white/30'}`;
+      });
+    }, { passive: true });
+
+    galleryPrevBtn.addEventListener('click', () => {
+      galleryScroller.scrollBy({ left: -galleryScroller.clientWidth * 0.78, behavior: 'smooth' });
+    });
+
+    galleryNextBtn.addEventListener('click', () => {
+      galleryScroller.scrollBy({ left: galleryScroller.clientWidth * 0.78, behavior: 'smooth' });
+    });
+
+    function openGalleryLightbox(index) {
+      isSecretLightbox = false;
+      currentLightboxIndex = index;
+      lightboxPrevBtn.style.display = 'flex';
+      lightboxNextBtn.style.display = 'flex';
+      showLightboxSlide(index);
+      zoomModal.classList.remove('hidden');
+      zoomModal.classList.add('flex');
+      gsap.fromTo(zoomModal, { opacity: 0 }, { opacity: 1, duration: 0.25 });
+    }
+
+    function openSecretLightbox() {
+      isSecretLightbox = true;
+      resetZoomTransform(false);
+      zoomModalImg.src = SURPRISE_CONFIG.secretPhotoUrl;
+      zoomCounter.textContent = 'Only For You ❤️ (9 / 9)';
+      lightboxPrevBtn.style.display = 'none';
+      lightboxNextBtn.style.display = 'none';
+      zoomModal.classList.remove('hidden');
+      zoomModal.classList.add('flex');
+      gsap.fromTo(zoomModal, { opacity: 0 }, { opacity: 1, duration: 0.25 });
+    }
+
+    function showLightboxSlide(index) {
+      const total = SURPRISE_CONFIG.galleryPhotos.length;
+      currentLightboxIndex = (index + total) % total;
+      resetZoomTransform(false);
+      zoomModalImg.src = SURPRISE_CONFIG.galleryPhotos[currentLightboxIndex];
+      zoomCounter.textContent = `${currentLightboxIndex + 1} / ${total}`;
+      scrollToSlide(currentLightboxIndex);
+    }
+
+    function closeZoomModal() {
+      gsap.to(zoomModal, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: () => {
+          zoomModal.classList.add('hidden');
+          zoomModal.classList.remove('flex');
+          resetZoomTransform(false);
+        }
+      });
+    }
+
+    lightboxPrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isSecretLightbox) showLightboxSlide(currentLightboxIndex - 1);
+    });
+
+    lightboxNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isSecretLightbox) showLightboxSlide(currentLightboxIndex + 1);
+    });
+
+    zoomResetBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (scale > 1.05) {
+        resetZoomTransform(true);
+      } else {
+        scale = 2.2;
+        updateImageTransform(true);
+      }
+    });
+
+    zoomCloseBtn.addEventListener('click', closeZoomModal);
+
+    // 2-Finger Pinch-to-Zoom, Pan when Zoomed, Double-Tap Zoom, and Swipe to Change Slide
+    function getTouchDistance(touches) {
+      const dx = touches[0].clientX - touches[1].clientX;
+      const dy = touches[0].clientY - touches[1].clientY;
+      return Math.hypot(dx, dy);
+    }
+
+    zoomViewport.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        isDragging = false;
+        initialPinchDistance = getTouchDistance(e.touches);
+        initialScale = scale;
+      } else if (e.touches.length === 1) {
+        // Double-tap detection for quick zoom toggle
+        const now = Date.now();
+        if (now - lastTapTime < 280) {
+          if (scale > 1.05) {
+            resetZoomTransform(true);
+          } else {
+            scale = 2.2;
+            updateImageTransform(true);
+          }
+          lastTapTime = 0;
+          return;
+        }
+        lastTapTime = now;
+
+        swipeStartX = e.touches[0].clientX;
+        swipeStartY = e.touches[0].clientY;
+
+        if (scale > 1.05) {
+          isDragging = true;
+          startX = e.touches[0].clientX - translateX;
+          startY = e.touches[0].clientY - translateY;
+        }
+      }
+    }, { passive: true });
+
+    zoomViewport.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2 && initialPinchDistance > 0) {
+        e.preventDefault();
+        const currentDist = getTouchDistance(e.touches);
+        const nextScale = Math.min(Math.max(initialScale * (currentDist / initialPinchDistance), 1), 4.5);
+        scale = nextScale;
+        if (scale <= 1.02) {
+          translateX = 0;
+          translateY = 0;
+        }
+        updateImageTransform(false);
+      } else if (e.touches.length === 1 && isDragging && scale > 1.05) {
+        e.preventDefault();
+        translateX = e.touches[0].clientX - startX;
+        translateY = e.touches[0].clientY - startY;
+        updateImageTransform(false);
+      }
+    }, { passive: false });
+
+    zoomViewport.addEventListener('touchend', (e) => {
+      if (e.touches.length < 2) {
+        initialPinchDistance = 0;
+      }
+      if (e.touches.length === 0) {
+        isDragging = false;
+        // Swipe left/right to switch slide when not zoomed in
+        if (scale <= 1.05 && !isSecretLightbox && e.changedTouches.length === 1) {
+          const deltaX = e.changedTouches[0].clientX - swipeStartX;
+          const deltaY = e.changedTouches[0].clientY - swipeStartY;
+          if (Math.abs(deltaX) > 48 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+            if (deltaX < 0) {
+              showLightboxSlide(currentLightboxIndex + 1);
+            } else {
+              showLightboxSlide(currentLightboxIndex - 1);
+            }
+          }
+        }
+      }
+    });
+
+    // Desktop double-click fallback
+    zoomModalImg.addEventListener('dblclick', () => {
+      if (scale > 1.05) resetZoomTransform(true);
+      else {
+        scale = 2.2;
+        updateImageTransform(true);
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       3. HIGH-PERFORMANCE CANVAS PARTICLE, HEART & BUTTERFLY SYSTEM
+       ------------------------------------------------------------------------ */
+    const canvas = document.getElementById('magic-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const NEON_PALETTE = [
+      '#ff1e8a', // Neon Pink
+      '#ff69b4', // Hot Pink
+      '#ff99cc', // Soft Blush Pink
+      '#c084fc', // Soft Purple
+      '#a855f7', // Royal Purple
+      '#f472b6'  // Rose Pink
+    ];
+
+    // Ambient floating sparkles & mini hearts (Always active softly in background)
+    class AmbientParticle {
+      constructor() {
+        this.reset(true);
+      }
+      reset(initial = false) {
+        this.x = Math.random() * width;
+        this.y = initial ? Math.random() * height : height + 20;
+        this.size = Math.random() * 4 + 2;
+        this.speedY = -(Math.random() * 0.65 + 0.25);
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.65 + 0.2;
+        this.color = NEON_PALETTE[Math.floor(Math.random() * NEON_PALETTE.length)];
+        this.isHeart = Math.random() > 0.48;
+        this.twinkleSpeed = Math.random() * 0.03 + 0.01;
+        this.phase = Math.random() * Math.PI * 2;
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.phase) * 0.2;
+        this.phase += this.twinkleSpeed;
+        if (this.y < -25) this.reset(false);
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = Math.max(0.1, this.alpha * (0.75 + 0.25 * Math.sin(this.phase)));
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 10;
+
+        if (this.isHeart) {
+          drawMiniHeart(ctx, this.x, this.y, this.size * 1.4);
+        } else {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size * 0.65, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+    }
+
+    // Animated Pink Butterflies & Burst Hearts for Scene 2 Celebration
+    class MagicButterfly {
+      constructor(burstFromCenter = true) {
+        if (burstFromCenter) {
+          this.x = width / 2 + (Math.random() - 0.5) * 120;
+          this.y = height / 2 + (Math.random() - 0.5) * 120;
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 5.5 + 2.2;
+          this.vx = Math.cos(angle) * speed;
+          this.vy = Math.sin(angle) * speed - 1.5;
+        } else {
+          this.x = Math.random() * width;
+          this.y = height + 30;
+          this.vx = (Math.random() - 0.5) * 2.5;
+          this.vy = -(Math.random() * 3.2 + 1.8);
+        }
+        this.size = Math.random() * 11 + 8;
+        this.color = NEON_PALETTE[Math.floor(Math.random() * NEON_PALETTE.length)];
+        this.wingAngle = Math.random() * Math.PI;
+        this.flapSpeed = Math.random() * 0.22 + 0.16;
+        this.life = 1;
+        this.decay = Math.random() * 0.0045 + 0.003;
+        this.wobble = Math.random() * 10;
+      }
+      update() {
+        this.wobble += 0.06;
+        this.vx *= 0.985;
+        this.vy = this.vy * 0.985 - 0.035; // Gently rise upward
+        this.x += this.vx + Math.sin(this.wobble) * 1.1;
+        this.y += this.vy;
+        this.wingAngle += this.flapSpeed;
+        this.life -= this.decay;
+      }
+      draw() {
+        if (this.life <= 0) return;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        const heading = Math.atan2(this.vy, this.vx) + Math.PI / 2;
+        ctx.rotate(heading * 0.35);
+        ctx.globalAlpha = Math.max(0, this.life);
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 14;
+
+        const flap = Math.abs(Math.sin(this.wingAngle)) * 0.85 + 0.2;
+        const s = this.size;
+
+        // Left Upper & Lower Wings
+        ctx.save();
+        ctx.scale(flap, 1);
+        ctx.beginPath();
+        ctx.ellipse(-s * 0.55, -s * 0.2, s * 0.65, s * 0.42, -0.35, 0, Math.PI * 2);
+        ctx.ellipse(-s * 0.42, s * 0.35, s * 0.45, s * 0.3, 0.35, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
+        // Right Upper & Lower Wings
+        ctx.save();
+        ctx.scale(flap, 1);
+        ctx.beginPath();
+        ctx.ellipse(s * 0.55, -s * 0.2, s * 0.65, s * 0.42, 0.35, 0, Math.PI * 2);
+        ctx.ellipse(s * 0.42, s * 0.35, s * 0.45, s * 0.3, -0.35, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
+        ctx.restore();
+      }
+    }
+
+    // Burst Confetti & Glowing Hearts
+    class CelebrationParticle {
+      constructor(isHeart = false) {
+        this.x = width / 2;
+        this.y = height / 2;
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = Math.random() * 9 + 3;
+        this.vx = Math.cos(angle) * velocity;
+        this.vy = Math.sin(angle) * velocity - 2;
+        this.gravity = 0.12;
+        this.drag = 0.96;
+        this.size = isHeart ? Math.random() * 8 + 5 : Math.random() * 6 + 3;
+        this.color = NEON_PALETTE[Math.floor(Math.random() * NEON_PALETTE.length)];
+        this.isHeart = isHeart;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.15;
+        this.life = 1;
+        this.decay = Math.random() * 0.008 + 0.006;
+      }
+      update() {
+        this.vx *= this.drag;
+        this.vy = this.vy * this.drag + this.gravity;
+        this.x += this.vx;
+        this.y += this.vy;
+        this.rotation += this.rotSpeed;
+        this.life -= this.decay;
+      }
+      draw() {
+        if (this.life <= 0) return;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.globalAlpha = Math.max(0, this.life);
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 10;
+
+        if (this.isHeart) {
+          drawMiniHeart(ctx, 0, 0, this.size);
+        } else {
+          ctx.fillRect(-this.size / 2, -this.size / 4, this.size, this.size / 2);
+        }
+        ctx.restore();
+      }
+    }
+
+    function drawMiniHeart(context, x, y, size) {
+      context.beginPath();
+      const topCurveHeight = size * 0.3;
+      context.moveTo(x, y + topCurveHeight);
+      context.bezierCurveTo(x, y, x - size / 2, y, x - size / 2, y + topCurveHeight);
+      context.bezierCurveTo(x - size / 2, y + (size + topCurveHeight) / 2, x, y + (size + topCurveHeight) / 1.4, x, y + size);
+      context.bezierCurveTo(x, y + (size + topCurveHeight) / 1.4, x + size / 2, y + (size + topCurveHeight) / 2, x + size / 2, y + topCurveHeight);
+      context.bezierCurveTo(x + size / 2, y, x, y, x, y + topCurveHeight);
+      context.closePath();
+      context.fill();
+    }
+
+    // Particle Pools (Optimized for mobile 60fps performance)
+    const ambientCount = window.innerWidth < 640 ? 32 : 55;
+    const ambientParticles = Array.from({ length: ambientCount }, () => new AmbientParticle());
+    let butterflies = [];
+    let burstParticles = [];
+
+    function triggerMagicalSwarm() {
+      const butterflyTotal = window.innerWidth < 640 ? 95 : 150;
+      const burstTotal = window.innerWidth < 640 ? 90 : 140;
+
+      // Initial center explosion of butterflies
+      for (let i = 0; i < Math.floor(butterflyTotal * 0.6); i++) {
+        butterflies.push(new MagicButterfly(true));
+      }
+      // Rising wave of butterflies from bottom
+      for (let i = 0; i < Math.floor(butterflyTotal * 0.4); i++) {
+        setTimeout(() => {
+          butterflies.push(new MagicButterfly(false));
+        }, i * 28);
+      }
+
+      // Hearts and confetti particles
+      for (let i = 0; i < burstTotal; i++) {
+        burstParticles.push(new CelebrationParticle(i % 2 === 0));
+      }
+    }
+
+    function animateCanvas() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < ambientParticles.length; i++) {
+        ambientParticles[i].update();
+        ambientParticles[i].draw();
+      }
+
+      for (let i = butterflies.length - 1; i >= 0; i--) {
+        butterflies[i].update();
+        butterflies[i].draw();
+        if (butterflies[i].life <= 0) butterflies.splice(i, 1);
+      }
+
+      for (let i = burstParticles.length - 1; i >= 0; i--) {
+        burstParticles[i].update();
+        burstParticles[i].draw();
+        if (burstParticles[i].life <= 0) burstParticles.splice(i, 1);
+      }
+
+      requestAnimationFrame(animateCanvas);
+    }
+    animateCanvas();
+
+    /* ------------------------------------------------------------------------
+       4. EXACT SEQUENTIAL SCENE CHOREOGRAPHY
+       Order:
+       1. Click To Open Love
+       2. Butterflies and hearts fly
+       3. Happy Birthday Zara Ma (letter by letter)
+       4. Birthday Photo
+       5. Animated Love Letter (Envelope -> Click -> Unfold & Type)
+       6. Voice Message
+       ------------------------------------------------------------------------ */
+    const scene1 = document.getElementById('scene-1');
+    const journey = document.getElementById('surprise-journey');
+    const scene3 = document.getElementById('scene-3');
+    const scene4 = document.getElementById('scene-4');
+    const scene5 = document.getElementById('scene-5');
+
+    let experienceStarted = false;
+    let envelopeOpened = false;
+    let secretUnlocked = false;
+    let typingTimer = null;
+
+    // Prepare letter-by-letter spans grouped by words so words never break mid-word
+    function prepareBirthdayHeading() {
+      const titleEl = document.getElementById('birthday-title');
+      titleEl.innerHTML = '';
+      const words = SURPRISE_CONFIG.birthdayHeading.split(' ');
+      words.forEach((word, wordIdx) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'word-group';
+
+        Array.from(word).forEach((char) => {
+          const charSpan = document.createElement('span');
+          charSpan.className = 'letter-span';
+          charSpan.textContent = char;
+          wordSpan.appendChild(charSpan);
+        });
+
+        titleEl.appendChild(wordSpan);
+
+        if (wordIdx < words.length - 1) {
+          titleEl.appendChild(document.createTextNode(' '));
+        }
+      });
+    }
+    prepareBirthdayHeading();
+
+    function startBirthdayExperience() {
+      if (experienceStarted) return;
+      experienceStarted = true;
+
+      // Step 2: Launch swarm of pink butterflies, glowing hearts & confetti
+      triggerMagicalSwarm();
+
+      // Fade out Scene 1 smoothly
+      gsap.to(scene1, {
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.65,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          scene1.style.display = 'none';
+          journey.classList.remove('scene-hidden');
+          gsap.to(journey, { opacity: 1, duration: 0.4 });
+
+          // Step 3: Reveal "Happy Birthday Zara Ma ❤️" letter by letter
+          const letters = document.querySelectorAll('#birthday-title .letter-span');
+          gsap.to(letters, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            filter: 'blur(0px)',
+            duration: 0.75,
+            stagger: 0.065,
+            ease: 'back.out(1.7)',
+            onComplete: () => {
+              gsap.to('#birthday-subtitle', {
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                ease: 'power2.out'
+              });
+
+              // Step 4: Reveal Birthday Photo Frame
+              revealSceneBlock(scene3, 0.35, () => {
+                // Step 5: Reveal Animated Envelope ("A Little Message For You 💌")
+                revealSceneBlock(scene4, 0.45, () => {
+                  // Step 6: Reveal Voice Message Player
+                  revealSceneBlock(scene5, 0.45);
+                });
+              });
+            }
+          });
+        }
+      });
+    }
+
+    function revealSceneBlock(element, delaySec, onCompleteCallback) {
+      element.classList.remove('scene-hidden');
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 36, scale: 0.96 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.85,
+          delay: delaySec,
+          ease: 'power3.out',
+          onComplete: onCompleteCallback
+        }
+      );
+    }
+
+    // Bind Scene 1 Heart Click & Keyboard Enter/Space
+    const openLoveBtn = document.getElementById('open-love-btn');
+    openLoveBtn.addEventListener('click', startBirthdayExperience);
+    openLoveBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        startBirthdayExperience();
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       5. SCENE 4: ENVELOPE UNFOLDING & TYPING ANIMATION
+       ------------------------------------------------------------------------ */
+    const envelopeWrapper = document.getElementById('envelope-wrapper');
+    const letterCard = document.getElementById('letter-card');
+    const typedLetterContent = document.getElementById('typed-letter-content');
+    const letterFooter = document.getElementById('letter-footer');
+
+    function openLoveLetter() {
+      if (envelopeOpened) return;
+      envelopeOpened = true;
+
+      // Trigger flap open animation
+      envelopeWrapper.classList.add('opened');
+
+      // Small celebratory heart burst
+      for (let i = 0; i < 28; i++) {
+        burstParticles.push(new CelebrationParticle(true));
+      }
+
+      // After flap unfolds, transition smoothly into the unfolded pink paper letter
+      setTimeout(() => {
+        gsap.to(envelopeWrapper, {
+          opacity: 0,
+          y: -15,
+          duration: 0.45,
+          onComplete: () => {
+            envelopeWrapper.style.display = 'none';
+            letterCard.classList.remove('scene-hidden');
+            gsap.fromTo(
+              letterCard,
+              { opacity: 0, y: 24, scale: 0.95 },
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.7,
+                ease: 'power3.out',
+                onComplete: () => {
+                  startTypingLetter(SURPRISE_CONFIG.letterMessage);
+                }
+              }
+            );
+          }
+        });
+      }, 650);
+    }
+
+    function startTypingLetter(fullText) {
+      clearInterval(typingTimer);
+      typedLetterContent.innerHTML = '';
+      letterFooter.style.opacity = '0';
+
+      const chars = Array.from(fullText);
+      let index = 0;
+
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      typedLetterContent.appendChild(cursor);
+
+      typingTimer = setInterval(() => {
+        if (index < chars.length) {
+          const textNode = document.createTextNode(chars[index]);
+          typedLetterContent.insertBefore(textNode, cursor);
+          index++;
+        } else {
+          clearInterval(typingTimer);
+          cursor.remove();
+          letterFooter.style.opacity = '1';
+        }
+      }, 32); // Smooth, readable handwriting reveal speed
+    }
+
+    envelopeWrapper.addEventListener('click', openLoveLetter);
+    envelopeWrapper.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLoveLetter();
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       6. SCENE 5: SECRET "ONLY FOR YOU" PHOTO REVEAL ON HEART CLICK
+       ------------------------------------------------------------------------ */
+    const secretCover = document.getElementById('secret-cover');
+    const secretPhotoImg = document.getElementById('secret-photo-img');
+    const secretUnlockedBadge = document.getElementById('secret-unlocked-badge');
+
+    secretPhotoImg.src = SURPRISE_CONFIG.secretPhotoUrl;
+
+    function unlockSecretPhoto() {
+      if (secretUnlocked) return;
+      secretUnlocked = true;
+
+      // Burst of glowing hearts & butterflies
+      for (let i = 0; i < 45; i++) {
+        burstParticles.push(new CelebrationParticle(true));
+      }
+      for (let i = 0; i < 24; i++) {
+        butterflies.push(new MagicButterfly(true));
+      }
+
+      // Smoothly dissolve & expand cover
+      secretCover.classList.add('unlocked');
+      secretUnlockedBadge.classList.remove('hidden');
+
+      gsap.fromTo(
+        secretPhotoImg,
+        { scale: 1.15, filter: 'blur(8px)' },
+        { scale: 1, filter: 'blur(0px)', duration: 0.9, ease: 'power3.out' }
+      );
+    }
+
+    secretCover.addEventListener('click', unlockSecretPhoto);
+    secretCover.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        unlockSecretPhoto();
+      }
+    });
+
+    secretPhotoImg.addEventListener('click', () => {
+      if (secretUnlocked) {
+        openSecretLightbox();
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       7. REPLAY ENTIRE MAGICAL EXPERIENCE
+       ------------------------------------------------------------------------ */
+    document.getElementById('replay-btn').addEventListener('click', () => {
+      // Reset states
+      experienceStarted = false;
+      envelopeOpened = false;
+      secretUnlocked = false;
+      clearInterval(typingTimer);
+
+      // Reset Gallery Scroll
+      galleryScroller.scrollTo({ left: 0, behavior: 'auto' });
+
+      // Reset Secret Covered Photo
+      secretCover.classList.remove('unlocked');
+      secretUnlockedBadge.classList.add('hidden');
+
+      // Hide Journey & Sub-scenes
+      journey.classList.add('scene-hidden');
+      journey.style.opacity = '0';
+      [scene3, scene4, scene5].forEach((sec) => {
+        sec.classList.add('scene-hidden');
+        sec.style.opacity = '0';
+      });
+
+      // Reset Heading Letters
+      document.getElementById('birthday-subtitle').style.opacity = '0';
+      prepareBirthdayHeading();
+
+      // Reset Envelope & Letter
+      envelopeWrapper.classList.remove('opened');
+      envelopeWrapper.style.display = 'block';
+      envelopeWrapper.style.opacity = '1';
+      envelopeWrapper.style.transform = 'none';
+      letterCard.classList.add('scene-hidden');
+      letterCard.style.opacity = '0';
+      typedLetterContent.innerHTML = '';
+
+      // Restore Scene 1
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      scene1.style.display = 'flex';
+      gsap.fromTo(scene1, { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.65, ease: 'power2.out' });
+    });
+  </script>
+</body>
+</html>
